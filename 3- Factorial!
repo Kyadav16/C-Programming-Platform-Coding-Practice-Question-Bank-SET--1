@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    // Reading input N from STDIN
+    scanf("%d", &N);
+
+    // Using long long to store large factorial values without overflow
+    long long factorial = 1;
+
+    // Multiply numbers from 1 to N
+    for (int i = 1; i <= N; i++) {
+        factorial *= i;
+    }
+
+    // Print the final result
+    printf("%lld\n", factorial);
+
+    return 0;
+}
