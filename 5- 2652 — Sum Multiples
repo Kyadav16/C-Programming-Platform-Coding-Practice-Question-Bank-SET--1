@@ -1,0 +1,13 @@
+int sumOfMultiples(int n) {
+    int sum = 0;
+    
+    // Loop through every number from 1 to n
+    for (int i = 1; i <= n; i++) {
+        // Check if i is divisible by 3, 5, or 7
+        if (i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
+            sum += i; // Add the number to total sum
+        }
+    }
+    
+    return sum;
+}
