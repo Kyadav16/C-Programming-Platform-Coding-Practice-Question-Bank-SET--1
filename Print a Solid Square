@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    // Outer loop controls the rows
+    for (int row = 0; row < n; row++) {
+        // Inner loop controls the columns (asterisks per row)
+        for (int col = 0; col < n; col++) {
+            printf("*");
+        }
+        // Move to the next line after completing a row
+        printf("\n");
+    }
+
+    return 0;
+}
