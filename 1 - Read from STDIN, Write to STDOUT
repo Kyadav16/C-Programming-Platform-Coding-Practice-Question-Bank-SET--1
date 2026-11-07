@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    char S[100]; // Array to store the input string
+
+    // Read integer N and string S from standard input
+    scanf("%d", &N);
+    scanf("%s", S);
+
+    // Print N multiplied by 2
+    printf("%d\n", N * 2);
+
+    // Print the string S
+    printf("%s\n", S);
+
+    return 0;
+}
