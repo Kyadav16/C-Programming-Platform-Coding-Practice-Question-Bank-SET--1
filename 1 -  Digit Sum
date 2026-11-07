@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    // Read the number of test cases
+    scanf("%d", &T);
+
+    // Loop through each test case
+    while (T--) {
+        int N;
+        scanf("%d", &N);
+
+        // Last digit is simply N % 10
+        int last_digit = N % 10;
+
+        // Keep dividing N by 10 until it becomes a single digit (first digit)
+        int first_digit = N;
+        while (first_digit >= 10) {
+            first_digit = first_digit / 10;
+        }
+
+        // Sum of first and last digits
+        int sum = first_digit + last_digit;
+
+        // Print the result for the current test case
+        printf("%d\n", sum);
+    }
+
+    return 0;
+}
