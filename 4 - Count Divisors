@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int l, r, k;
+
+    // Read l, r, and k from standard input
+    scanf("%d %d %d", &l, &r, &k);
+
+    int count = 0;
+
+    // Loop through all numbers from l to r inclusive
+    for (int i = l; i <= r; i++) {
+        if (i % k == 0) {
+            count++;
+        }
+    }
+
+    // Print the final count
+    printf("%d\n", count);
+
+    return 0;
+}
