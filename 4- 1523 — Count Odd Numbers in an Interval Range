@@ -1,0 +1,8 @@
+int countOdds(int low, int high) {
+    // Formula to calculate odd numbers in O(1) constant time
+    if (low % 2 != 0 || high % 2 != 0) {
+        return (high - low) / 2 + 1;
+    } else {
+        return (high - low) / 2;
+    }
+}
