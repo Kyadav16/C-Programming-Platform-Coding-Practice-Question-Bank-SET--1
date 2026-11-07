@@ -1,0 +1,24 @@
+#include <stdbool.h>
+
+bool checkPerfectNumber(int num) {
+    // 1 and negative numbers are not perfect numbers
+    if (num <= 1) {
+        return false;
+    }
+
+    int sum = 1; // 1 is always a proper divisor for num > 1
+
+    // Find divisors up to sqrt(num)
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            sum += i;
+            
+            // Add the corresponding paired divisor if it's distinct
+            if (i * i != num) {
+                sum += num / i;
+            }
+        }
+    }
+
+    return sum == num;
+}
