@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int L, N;
+    int W, H;
+
+    // Read minimum dimension L and number of photos N
+    scanf("%d", &L);
+    scanf("%d", &N);
+
+    // Process each of the N photos
+    for (int i = 0; i < N; i++) {
+        scanf("%d %d", &W, &H);
+
+        // Case 1: If either width or height is smaller than minimum required size L
+        if (W < L || H < L) {
+            printf("UPLOAD ANOTHER\n");
+        } 
+        // Case 2a: Both W and H are >= L, and width equals height (square photo)
+        else if (W == H) {
+            printf("ACCEPTED\n");
+        } 
+        // Case 2b: Both W and H are >= L, but width is not equal to height
+        else {
+            printf("CROP IT\n");
+        }
+    }
+
+    return 0;
+}
