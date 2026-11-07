@@ -1,0 +1,16 @@
+#include <stdbool.h>
+
+bool isPowerOfThree(int n) {
+    // Powers of three must be strictly positive
+    if (n <= 0) {
+        return false;
+    }
+
+    // Keep dividing by 3 as long as n is divisible by 3
+    while (n % 3 == 0) {
+        n /= 3;
+    }
+
+    // If it was a power of three, n will end up as 1
+    return n == 1;
+}
